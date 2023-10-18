@@ -11,21 +11,22 @@ def choose_options():
         print(" " * 13, f"({user_option})", "VS", f"({computer_option})")
         return user_option, computer_option
     else:
-        print("The name is invalid")
+        print(' ' * 13, "The name is invalid")
         return None, None
 
 
 def check_rules(user_option, computer_option, user_wins, computer_wins):
     if user_option == computer_option:
-        print('Draw!\n')
+        print(" " * 20, 'Draw!')
+        print(" " * 16, 'Nobody wins!\n')
     elif user_option == 'Rock':
         if computer_option == '️Scissors':
-            print('🪨 Rock beats scissors ✂️')
-            print('¡User wins!\n')
+            print(" " * 10, '🪨 Rock beats scissors ✂️')
+            print(" " * 15, '¡User wins!\n')
             user_wins += 1
         else:
-            print('📄 Paper beats a rock 🪨')
-            print('¡Computer wins!\n')
+            print(" " * 10, '📄 Paper beats a rock 🪨')
+            print(" " * 15, '¡Computer wins!\n')
             computer_wins += 1
     elif user_option == 'Paper':
         if computer_option == 'Rock':
