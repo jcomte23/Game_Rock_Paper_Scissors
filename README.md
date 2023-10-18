@@ -1,2 +1,24 @@
-# Game_Rock_Paper_Scissors
-Python implementation of the classic 'Rock, Paper, Scissors' game that runs on the console. Have fun challenging the machine in this quick decision game!
+<h1 align="center">Game Rock Paper and Scissors</h1>
+
+<p align="center"><img src="https://www.risasinmas.com/wp-content/uploads/2013/04/piedra-papel-tijera.jpg" width="200" alt="logo"></p>
+
+<p align="center">Python implementation of the classic 'Rock, Paper, Scissors' game that runs on the console. Have fun challenging the machine in this quick decision game!</p>
+
+## Getting Started
+
+1.Clone the repository, preferably via SSH security keys or there is also the HTTPS method.
+
+2.Execute the command ```python main.py``` in the command terminal inside the project.
+
+### Prerequisites
+*Check to have <a href="https://www.python.org/" target="_blank"><img src="https://img.shields.io/static/v1?style=for-the-badge&message=Python&color=3776AB&logo=Python&logoColor=FFFFFF&label" /></a>&nbsp;&nbsp; installed, run ```python --version``` in the terminal. 
+
+## Author
+
+This project was created by **[Javier Cómbita Téllez](https://github.com/jcomte23)**. 
+
+If you have any questions or comments about the project, you can contact Javier at Jcomte23@outlook.com.
+
+## Project status
+
+This project is currently under active development and updates are expected to be released in the near future
