@@ -50,6 +50,24 @@ def check_rules(user_option, computer_option, user_wins, computer_wins):
     return user_wins, computer_wins
 
 
+def check_winner(user_wins, computer_wins):
+    print(" " * 13, f"🤖 Computer wins: {computer_wins}")
+    print(" " * 15, f"🙋 User wins: {user_wins}")
+    print()
+
+    if user_wins > computer_wins:
+        print(" " * 11, '🎖️ User is the winner 🎖️')
+    elif computer_wins > user_wins:
+        print(" " * 9, '🎖️ Computer is the winner 🎖️')
+    elif user_wins == computer_wins:
+        print(" " * 10, '🎖️ No one won the game 🎖️')
+
+    print()
+    print(f"[     👍👍thanks for playing, game over 👍👍    ]")
+    print()
+    exit()
+
+
 def run_game():
     computer_wins = 0
     user_wins = 0
@@ -67,13 +85,14 @@ def run_game():
             user_wins, computer_wins = check_rules(user_option, computer_option, user_wins, computer_wins)
         else:
             break
+    check_winner(user_wins, computer_wins)
 
 
 print()
 print(f"[ 🤖 Welcome to the game Rock, Paper, Scissors 🙋]")
 print()
 # quantity_rounds = int(input("      How many rounds do you want to play? ->"))
-quantity_rounds = 2
+quantity_rounds = 3
 print()
 print(" " * 11, "Let's go, start the game.")
 print()
