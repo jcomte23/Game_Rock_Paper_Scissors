@@ -1,3 +1,22 @@
+import random
+
+
+def choose_options():
+    options = ('Rock', 'Paper', '️Scissors')
+    print(' ' * 8, '🪨 Rock, 📄Paper o ✂️Scissors')
+    user_option = input(" "*16+"Option ->").capitalize().strip()
+
+    if user_option in options:
+        computer_option = random.choice(options)
+
+        print('User option => ', user_option)
+        print('Computer option => ', computer_option)
+        return user_option, computer_option
+    else:
+        print("The name isn invalid")
+        return None, None
+
+
 def run_game():
     computer_wins = 0
     user_wins = 0
