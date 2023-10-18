@@ -19,30 +19,30 @@ def check_rules(user_option, computer_option, user_wins, computer_wins):
     if user_option == computer_option:
         print(" " * 20, 'Draw!')
         print(" " * 16, 'Nobody wins!\n')
-    elif user_option == 'Rock':
-        if computer_option == '️Scissors':
+    elif user_option == "Rock":
+        if computer_option == "Scissors":
             print(" " * 10, '🪨 Rock beats scissors ✂️')
             print(" " * 15, '¡User wins!\n')
             user_wins += 1
-        else:
+        elif computer_option == "Paper":
             print(" " * 10, '📄 Paper beats a rock 🪨')
             print(" " * 15, '¡Computer wins!\n')
             computer_wins += 1
-    elif user_option == 'Paper':
-        if computer_option == 'Rock':
+    elif user_option == "Paper":
+        if computer_option == "Rock":
             print(" " * 10, '📄 Paper beats rock 🪨')
             print(" " * 15, '¡User wins!\n')
             user_wins += 1
-        else:
+        elif computer_option == "Scissors":
             print(" " * 10, '✂️ ️Scissors beats paper 📄')
             print(" " * 15, '¡Computer wins!\n')
             computer_wins += 1
-    elif user_option == '️Scissors':
-        if computer_option == 'Rock':
+    elif user_option == "Scissors":
+        if computer_option == "Paper":
             print(" " * 10, '✂️ ️Scissors beats paper 📄')
             print(" " * 15, '¡User wins!\n')
             user_wins += 1
-        else:
+        elif computer_option == "Rock":
             print(" " * 10, '🪨 Rock beats ️scissors ✂️')
             print(" " * 15, '¡Computer wins!\n')
             computer_wins += 1
@@ -79,22 +79,24 @@ def run_game():
             print(" " * 20, 'Round ', rounds)
             print(" " * 8, '***' * 10)
             print(" " * 3, f">>> Choose an option (Enter the name) <<<")
-            rounds += 1
 
             user_option, computer_option = choose_options()
             user_wins, computer_wins = check_rules(user_option, computer_option, user_wins, computer_wins)
+            rounds += 1
         else:
             break
     check_winner(user_wins, computer_wins)
 
 
-print()
-print(f"[ 🤖 Welcome to the game Rock, Paper, Scissors 🙋]")
-print()
-# quantity_rounds = int(input("      How many rounds do you want to play? ->"))
-quantity_rounds = 3
-print()
-print(" " * 11, "Let's go, start the game.")
-print()
+try:
+    print()
+    print(f"[ 🤖 Welcome to the game Rock, Paper, Scissors 🙋]")
+    print()
+    quantity_rounds = int(input("      How many rounds do you want to play? ->"))
+    print()
+    print(" " * 11, "Let's go, start the game.")
+    print()
 
-run_game()
+    run_game()
+except ValueError:
+    print(' ' * 13, "The quantity is invalid")
