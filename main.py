@@ -30,21 +30,21 @@ def check_rules(user_option, computer_option, user_wins, computer_wins):
             computer_wins += 1
     elif user_option == 'Paper':
         if computer_option == 'Rock':
-            print('📄 Paper beats rock 🪨')
-            print('¡User wins!\n')
+            print(" " * 10, '📄 Paper beats rock 🪨')
+            print(" " * 15, '¡User wins!\n')
             user_wins += 1
         else:
-            print('✂️ ️Scissors beats paper 📄')
-            print('¡Computer wins!\n')
+            print(" " * 10, '✂️ ️Scissors beats paper 📄')
+            print(" " * 15, '¡Computer wins!\n')
             computer_wins += 1
     elif user_option == '️Scissors':
         if computer_option == 'Rock':
-            print('✂️ ️Scissors beats paper 📄')
-            print('¡User wins!\n')
+            print(" " * 10, '✂️ ️Scissors beats paper 📄')
+            print(" " * 15, '¡User wins!\n')
             user_wins += 1
         else:
-            print('🪨 Rock beats ️scissors ✂️')
-            print('¡Computer wins!\n')
+            print(" " * 10, '🪨 Rock beats ️scissors ✂️')
+            print(" " * 15, '¡Computer wins!\n')
             computer_wins += 1
 
     return user_wins, computer_wins
